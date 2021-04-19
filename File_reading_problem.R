@@ -25,10 +25,9 @@ subcellular2 <- read.table(paste0(PathName,"/subcellular2.csv"),  # 資料檔名
 subcellular3 <- read.delim(paste0(PathName,"/subcellular2.csv"),  # 資料檔名
                        header=F,          # 資料中的第一列，作為欄位名稱
                        sep=",")           # 將逗號視為分隔符號來讀取資料
-# Test
-subcellular_E1 <- read.table(paste0(PathName,"/subcellular.xltx"),  # 資料檔名
-                       header=F,          # 資料中的第一列，作為欄位名稱
-                       sep=" ")           # 將逗號視為分隔符號來讀取資料
+# Test read_excel
+library(readxl)
+subcellular_E1 <- read_excel(paste0(PathName,"/subcellular.xltx"), col_names=F)
 
 
 ### !!! https://stackoverflow.com/questions/12828438/read-csv-vs-read-table
@@ -36,5 +35,6 @@ datainte2 <- read.delim(paste0(PathName,"/mouse_compartment_integrated_full.tsv"
                        header=F,          # 資料中的第一列，作為欄位名稱
                        sep="\t")           # 將逗號視為分隔符號來讀取資料
 
+subcellular2_Matrix <- as.matrix(subcellular2)
 
 
