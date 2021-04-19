@@ -38,3 +38,4 @@ datainte2 <- read.delim(paste0(PathName,"/mouse_compartment_integrated_full.tsv"
 subcellular2_Matrix <- as.matrix(subcellular2)
 
 
+subcellularUni <- unique(subcellular)
